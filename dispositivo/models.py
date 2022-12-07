@@ -10,8 +10,8 @@ class Dispositivo(models.Model):
     bairro = models.CharField(max_length=50, null=False, blank=False)
     cidade = models.CharField(max_length=50, null=False, blank=False)
     estado = models.CharField(max_length=50, null=False, blank=False)
-    latitude = models.DecimalField(max_digits=8, decimal_places=3)
-    longitude = models.DecimalField(max_digits=8, decimal_places=3)
+    latitude = models.DecimalField(max_digits=12, decimal_places=9)
+    longitude = models.DecimalField(max_digits=12, decimal_places=9)
     status = models.BooleanField(default=False)
 
     def __str__(self):

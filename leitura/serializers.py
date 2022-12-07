@@ -5,4 +5,4 @@ from leitura.models import Leitura
 class LeituraSerializer(serializers.ModelSerializer):
     class Meta:
         model = Leitura
-        fields = ['leitura','created',]
+        fields = '__all__'

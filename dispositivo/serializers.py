@@ -6,7 +6,8 @@ from .models import Dispositivo
 
 class DispositivoSerializer(serializers.ModelSerializer):
     # ADICIONAR CAMPO leituras, POIS TERÁ VÁRIAS LEITURAS POR DISPOSITIVO
-    leituras = LeituraSerializer(many=True)
+    leitura_set = LeituraSerializer(many=True, required=False)
     class Meta:
         model = Dispositivo
-        fields = ['id','mac', 'email', 'leituras']
+        # fields = ['id','mac', 'email', 'leitura_set']
+        fields = '__all__'

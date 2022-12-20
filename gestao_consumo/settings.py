@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-lpd1ysttl@_7a6kfp!c0sh!4*!x@8!x3x3fok3!^2-8m#f@3(r
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -151,13 +151,16 @@ REST_FRAMEWORK = {
     ),
 }
 
-# Configurar os endereços que poderão acessar ao servidor
-CORS_ALLOWED_ORIGINS = [
-    # "https://example.com",
-    # "https://sub.example.com",
-    "http://localhost:3000",
-    "http://127.0.0.1:3000",
-]
+# Configurar os endereços de aplicações externas que poderão acessar ao servidor
+# CORS_ALLOWED_ORIGINS = [
+#     # "https://example.com",
+#     # "https://sub.example.com",
+#     "http://localhost:3000",
+#     "http://127.0.0.1:3000",
+# ]
+
+CORS_ALLOW_ALL_ORIGINS = True
+
 
 # Configurações do DJOSER para envio de email com links de ativações
 DJOSER = {

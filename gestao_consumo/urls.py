@@ -8,6 +8,7 @@ from leitura.views import LeituraViewSet
 from gestao_consumo.views import UserActivationView
 
 router = routers.DefaultRouter()
+# SEMPRE APÓS DEFINIR UM get_queryset TEMOS QUE DIZER SEU BASENAME
 router.register(r'dispositivos', DispositivoViewSet, basename='Dispositivo')
 router.register(r'leituras', LeituraViewSet, basename='Leitura')
 
